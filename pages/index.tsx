@@ -1,7 +1,12 @@
 import React from "react";
+import Spotlight from "../components/Spotlight";
 
 function Home() {
-  return <div className="text-9xl">Home</div>;
+  return (
+    <>
+      <Spotlight />
+    </>
+  );
 }
 
 export default Home;
