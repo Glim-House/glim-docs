@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 function SiteLayout({ children }: any) {
   return (
-    <div>
+    <div className="font-noto">
       <NavBar />
       {children}
     </div>
