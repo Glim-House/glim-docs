@@ -14,7 +14,7 @@ function GettingStarted() {
           <p className="mt-4">To create new glim project, you can use :</p>
           <CodeBlock code={createapp} language="bash" />
           <p className="mt-4">
-            Once's it running, it will create a new glim project with
+            Once&apos;s it running, it will create a new glim project with
             corresponding name along with typical folders and configuration
             files.
           </p>
@@ -29,9 +29,9 @@ function GettingStarted() {
             <li>
               <span className="codeline">/android and /ios </span> - The folders
               where all the native code lives. If we needed to add or edit any
-              platform specific native code, this is where we'd have to look. We
-              also need to go into these folders if we have to install any
-              native libraries
+              platform specific native code, this is where we&apos;d have to
+              look. We also need to go into these folders if we have to install
+              any native libraries
             </li>
             <li>
               <span className="codeline">.prettierrc.js</span> - Code formatter

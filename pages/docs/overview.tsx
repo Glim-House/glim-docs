@@ -11,9 +11,9 @@ function Overview() {
           <div className="text-5xl font-semibold mb-4">Overview</div>
           <p>
             Glim cli is the react native boilerplate that provide hassle-free
-            architecture for developing react native applications. It's an all
-            in one library kit for react native developers. Through glim cli we
-            can create components, screens, redux components etc.
+            architecture for developing react native applications. It&apos;s an
+            all in one library kit for react native developers. Through glim cli
+            we can create components, screens, redux components etc.
           </p>
           <div className="text-3xl font-semibold mt-8">Prerequisites</div>
           <ul className="list-disc list-inside">
