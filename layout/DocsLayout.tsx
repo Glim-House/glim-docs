@@ -22,7 +22,7 @@ function DocsLayout({ children }: any) {
     },
     {
       name: "Testing",
-      route: "/docs/testing",
+      route: "/docs/testing/e2e",
       active: router.pathname.includes("/docs/testing"),
     },
     {
@@ -33,7 +33,7 @@ function DocsLayout({ children }: any) {
   ];
   return (
     <div>
-      <div className="bg-[#F8F9FA] pt-6">
+      <div className="bg-[#F8F9FA] pt-6 sticky top-0">
         <div className="container mx-auto px-2 pt-2 ">
           <div className="font-semibold">DOCUMENTATION</div>
           <div className="flex space-x-14 mt-6 overflow-y-scroll">

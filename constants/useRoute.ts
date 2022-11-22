@@ -19,5 +19,17 @@ export const useRoute = () => {
       active: router.pathname.includes("/docs/generators/store"),
     },
   ];
-  return { generatorRoute };
+  const testingRoute = [
+    {
+      name: "E2E",
+      route: "/docs/testing/e2e",
+      active: router.pathname.includes("/docs/testing/e2e"),
+    },
+    {
+      name: "unitTesting",
+      route: "/docs/testing/unit-testing",
+      active: router.pathname.includes("/docs/testing/unit-testing"),
+    },
+  ];
+  return { generatorRoute, testingRoute };
 };

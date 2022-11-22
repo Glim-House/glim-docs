@@ -12,7 +12,7 @@ interface Props {
 function SubLayout({ children, routelist }: Props) {
   return (
     <div className="container mx-auto py-16 flex ">
-      <div className="w-[400px] px-4 flex flex-col">
+      <div className="min-w-[250px] px-4 flex flex-col ">
         {routelist.map((obj, index) => {
           return (
             <Link
@@ -27,7 +27,7 @@ function SubLayout({ children, routelist }: Props) {
           );
         })}
       </div>
-      <div className="w-full px-4 ">{children}</div>
+      <div className="w-2/3 px-4  ">{children}</div>
     </div>
   );
 }
