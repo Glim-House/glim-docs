@@ -8,7 +8,7 @@ function HeadwithTitle({ page }: Props) {
   return (
     <>
       <Head>
-        <title>Glim | {page} </title>
+        <title>Glim | {page || ""} </title>
       </Head>
     </>
   );

@@ -75,3 +75,118 @@ export const appconfig = {
 +      build: 'xcodebuild -workspace ios/example.xcworkspace -scheme example -configuration Release -sdk iphonesimulator -derivedDataPath ios/build'
     },`,
 };
+export const buildapp = {
+  androiddebug: `detox build --configuration android.emu.debug`,
+  androidrelease: `detox build --configuration android.emu.release`,
+  iosdebug: `detox build --configuration ios.sim.debug`,
+  iosrelease: `detox build --configuration ios.sim.release`,
+};
+export const test = `describe("Example", () => {
+  beforeAll(async () => {});
+
+  beforeEach(async () => {});
+
+  it("should test something", async () => {});
+});`;
+export const runtest = {
+  androiddebug: `detox test --configuration android.emu.debug`,
+  androidrelease: `detox test --configuration android.emu.release`,
+  iosdebug: `detox test --configuration ios.sim.debug`,
+  iosrelease: `detox test --configuration ios.sim.release`,
+};
+export const androidconfiguration = {
+  buildscriptone: ` buildscript {
+    ext {
+      buildToolsVersion = "31.0.0"
+      minSdkVersion = 21
+      compileSdkVersion = 30
+      targetSdkVersion = 30
+ +    kotlinVersion = 'X.Y.Z'
+    }
+  …
+    dependencies {
+      classpath("com.android.tools.build:gradle:7.1.1")
+      classpath("com.facebook.react:react-native-gradle-plugin")
+      classpath("de.undercouch:gradle-download-task:5.0.1")
+ +    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+  …
+ 
+  allprojects {
+    repositories {
+    …
+    google()
+ +  maven {
+ +    url("$rootDir/../node_modules/detox/Detox-android")
+ +  }
+    maven { url 'https://www.jitpack.io' }
+  }`,
+  buildscripttwo: ` …
+
+  android {
+    …
+    defaultConfig {
+      …
+      versionCode 1
+      versionName "1.0"
+ +    testBuildType System.getProperty('testBuildType', 'debug')
+ +    testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    …
+    buildTypes {
+      release {
+        minifyEnabled true
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+ +      proguardFile "$ {project(":detox").projectDir}/proguard-rules-app.pro"
+ 
+        signingConfig signingConfigs.release
+      }
+    }
+    …
+ 
+  dependencies {
+ +  androidTestImplementation('com.wix:detox:+')
+ +  implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation fileTree(dir: "libs", include: ["*.jar"])`,
+  nativetest: `
+  package com.<your.package>;
+
+import com.wix.detox.Detox;
+import com.wix.detox.config.DetoxConfig;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
+
+@RunWith(AndroidJUnit4.class)
+@LargeTest
+public class DetoxTest {
+    @Rule // (2)
+    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class, false, false);
+
+    @Test
+    public void runDetoxTests() {
+        DetoxConfig detoxConfig = new DetoxConfig();
+        detoxConfig.idlePolicyConfig.masterTimeoutSec = 90;
+        detoxConfig.idlePolicyConfig.idleResourceTimeoutSec = 60;
+        detoxConfig.rnContextLoadTimeoutSec = (BuildConfig.DEBUG ? 180 : 60);
+
+        Detox.runTests(mActivityRule, detoxConfig);
+    }
+}`,
+  manifestone: `<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain>
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+</network-security-config>`,
+  manifesttwo: ` <manifest>
+<application
+…
++    android:networkSecurityConfig="@xml/network_security_config">
+</application>
+</manifest>`,
+};

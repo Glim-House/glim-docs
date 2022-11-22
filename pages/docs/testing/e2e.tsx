@@ -4,7 +4,9 @@ import Appconfig from "../../../components/detox/Appconfig";
 import DeviceConfiig from "../../../components/detox/DeviceConfiig";
 import GlobalConfiguration from "../../../components/detox/GlobalConfiguration";
 import ProjectConfiguration from "../../../components/detox/ProjectConfiguration";
+import BuildApp from "../../../components/detox/BuildApp";
 import HeadwithTitle from "../../../components/HeadwithTitle";
+
 import {
   componentgenerate,
   installapplesimults,
@@ -13,6 +15,9 @@ import {
 import { useRoute } from "../../../constants/useRoute";
 import DocsLayout from "../../../layout/DocsLayout";
 import SubLayout from "../../../layout/SubLayout";
+import WriteTest from "../../../components/detox/WriteTest";
+import RunningTest from "../../../components/detox/RunningTest";
+import AndroidConfiguration from "../../../components/detox/AndroidConfiguration";
 
 function EndToEnd() {
   const { testingRoute } = useRoute();
@@ -38,6 +43,10 @@ function EndToEnd() {
           <ProjectConfiguration />
           <DeviceConfiig />
           <Appconfig />
+          <AndroidConfiguration />
+          <BuildApp />
+          <WriteTest />
+          <RunningTest />
         </SubLayout>
       </DocsLayout>
     </>
