@@ -1,5 +1,5 @@
 import React from "react";
-import DocsLayout from "../../components/DocsLayout";
+import DocsLayout from "../../layout/DocsLayout";
 
 function testing() {
   return (

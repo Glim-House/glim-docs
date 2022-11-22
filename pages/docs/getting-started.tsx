@@ -1,6 +1,6 @@
 import React from "react";
 import CodeBlock from "../../components/CodeBlock";
-import DocsLayout from "../../components/DocsLayout";
+import DocsLayout from "../../layout/DocsLayout";
 import HeadwithTitle from "../../components/HeadwithTitle";
 import { createapp } from "../../constants/code";
 

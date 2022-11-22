@@ -1,8 +1,11 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-
-function CodeBlock({ code, language }: any) {
+interface Props {
+  code: string;
+  language: string;
+}
+function CodeBlock({ code, language }: Props) {
   return (
     <div className="font-mono  my-4 rounded">
       <code>

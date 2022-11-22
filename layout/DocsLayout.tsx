@@ -8,27 +8,27 @@ function DocsLayout({ children }: any) {
     {
       name: "Overview",
       route: "/docs/overview",
-      active: router.pathname === "/docs/overview",
+      active: router.pathname.includes("/docs/overview"),
     },
     {
       name: "Getting Started",
       route: "/docs/getting-started",
-      active: router.pathname === "/docs/getting-started",
+      active: router.pathname.includes("/docs/getting-started"),
     },
     {
       name: "Generators",
-      route: "/docs/generators",
-      active: router.pathname === "/docs/generators",
+      route: "/docs/generators/component",
+      active: router.pathname.includes("/docs/generators"),
     },
     {
       name: "Testing",
       route: "/docs/testing",
-      active: router.pathname === "/docs/testing",
+      active: router.pathname.includes("/docs/testing"),
     },
     {
       name: "CI / CD",
       route: "/docs/ci-cd",
-      active: router.pathname === "/docs/ci-cd",
+      active: router.pathname.includes("/docs/ci-cd"),
     },
   ];
   return (
