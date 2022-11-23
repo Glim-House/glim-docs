@@ -7,7 +7,7 @@ function Overview() {
     <>
       <HeadwithTitle page="Overview" />
       <DocsLayout>
-        <div className="container lg:w-3/4 mx-auto py-16">
+        <div className="container lg:w-3/4 mx-auto py-16 px-4">
           <div className="text-5xl font-semibold mb-4">Overview</div>
           <p>
             Glim cli is the react native boilerplate that provide hassle-free

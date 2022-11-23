@@ -26,7 +26,9 @@ function CodeBlock({ code, language, filename }: Props) {
           <pre className="cursor-pointer overflow-scroll" onClick={copycode}>
             <SyntaxHighlighter language={language}>{code}</SyntaxHighlighter>
           </pre>
-          <div className="text-right text-sm opacity-70">{filename}</div>
+          <div className="text-right text-sm opacity-70 overflow-y-auto">
+            {filename}
+          </div>
         </code>
       </div>
     </>
