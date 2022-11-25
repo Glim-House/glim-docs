@@ -1,7 +1,7 @@
-export const createapp = `npx glim create-app [app-name]`;
-export const componentgenerate = `npx glim generate --component [component-name]`;
-export const screengenerate = `npx glim generate --screen [component-name]`;
-export const storegenerate = `npx glim generate --store [component-name]`;
+export const createapp = `npx glim-cli create-app [app-name]`;
+export const componentgenerate = `npx glim-cli generate --component [component-name]`;
+export const screengenerate = `npx glim-cli generate --screen [component-name]`;
+export const storegenerate = `npx glim-cli generate --store [component-name]`;
 export const installDetox = `npm install detox-cli --global`;
 export const installapplesimults = `brew tap wix/brew
 brew install applesimutils

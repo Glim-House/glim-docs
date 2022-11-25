@@ -8,13 +8,24 @@ interface githubData {
   stargazers_count: number;
   forks: number;
 }
+interface npmData {
+  downloads: number;
+}
 function Counter() {
   const [repodata, setRepodata] = useState<githubData>();
+  const [npmdownload, setNpmdownload] = useState<npmData>();
   useEffect(() => {
     axios
       .get("https://api.github.com/repos/neoito-hub/glim-cli")
       .then((Response) => {
         setRepodata(Response.data);
+      });
+    axios
+      .get(
+        "https://api.npmjs.org/downloads/point/2020-11-24:2030-12-24/glim-cli"
+      )
+      .then((Response) => {
+        setNpmdownload(Response.data);
       });
   }, []);
 
@@ -49,7 +60,9 @@ function Counter() {
           <div className="absolute -right-8 -top-8 w-16 h-16 rounded-full  bg-white shadow-xl flex justify-center items-center ">
             <DownLoad />
           </div>
-          <div className="font-bold text-4xl text-center">100</div>
+          <div className="font-bold text-4xl text-center">
+            {npmdownload?.downloads}
+          </div>
           <div className="font-bold text-xl text-center">Downloads</div>
         </div>
       </div>

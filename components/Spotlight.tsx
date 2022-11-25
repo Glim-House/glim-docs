@@ -12,7 +12,7 @@ function Spotlight() {
             Glim <br /> all in one react native tool
           </div>
           <div className="leading-relaxed mt-4">
-            gliim aims to provide a hassle free react native templating and
+            glim aims to provide a hassle free react native templating and
             development with a fully featured boilerplate
           </div>
         </div>
