@@ -42,7 +42,7 @@ function DocsLayout({ children }: any) {
                 <Link
                   href={obj.route}
                   key={index}
-                  className={` font-normal pb-2 border-[#1769E0] ${
+                  className={` font-normal pb-2 border-[#1769E0] min-w-[120px] text-center ${
                     obj.active && "border-b-4 text-[#1769E0] "
                   }`}
                 >

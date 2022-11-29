@@ -9,7 +9,7 @@ function GettingStarted() {
     <>
       <HeadwithTitle page="Getting started" />
       <DocsLayout>
-        <div className="container lg:w-3/4 mx-auto py-16">
+        <div className="container lg:w-3/4 mx-auto py-16 px-2">
           <div className="text-5xl font-semibold">Glim CLI</div>
           <p className="mt-4">To create new glim project, you can use :</p>
           <CodeBlock code={createapp} language="bash" />

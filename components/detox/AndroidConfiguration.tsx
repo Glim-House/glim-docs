@@ -17,14 +17,16 @@ function AndroidConfiguration() {
         </ul>
         <li>Native test code:</li>
         <ul className="list-inside list-disc ml-10">
-          <li>
+          <li className="wrap">
             android/app/src/androidTest/java/com/your.package/DetoxTest.java
           </li>
         </ul>
         <li>Manifests:</li>
         <ul className="list-inside list-disc ml-10">
           <li>android/app/src/main/AndroidManifest.xml</li>
-          <li>android/app/src/main/res/xml/network_security_config.xml</li>
+          <li className="wrap">
+            android/app/src/main/res/xml/network_security_config.xml
+          </li>
         </ul>
       </ul>
       <p className="mt-6 text-2xl font-semibold">Build Scripts</p>
