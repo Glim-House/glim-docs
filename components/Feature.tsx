@@ -7,7 +7,7 @@ function Feature() {
 
       <div className="flex md:flex-row flex-col mt-6 ">
         <div className="md:w-1/4 p-4">
-          <div className="bg-[#073042] px-4 py-12 text-white h-full ">
+          <div className="bg-[#073042] px-8 py-12 text-white h-full ">
             <div className="text-2xl font-semibold">Easy to Use</div>
             <div className="mt-4">
               Start quickly with built-in navigators that deliver a seamless
@@ -16,7 +16,7 @@ function Feature() {
           </div>
         </div>
         <div className="md:w-1/4 p-4">
-          <div className="bg-[#073042] px-4 py-12 text-white h-full ">
+          <div className="bg-[#073042] px-8 py-12 text-white h-full ">
             <div className="text-2xl font-semibold">
               Components built for iOS and Android
             </div>
@@ -27,7 +27,7 @@ function Feature() {
           </div>
         </div>{" "}
         <div className="md:w-1/4 p-4">
-          <div className="bg-[#073042] px-4 py-12 text-white h-full ">
+          <div className="bg-[#073042] px-8 py-12 text-white h-full ">
             <div className="text-2xl font-semibold">
               Completely customizable
             </div>
@@ -38,7 +38,7 @@ function Feature() {
           </div>
         </div>{" "}
         <div className="md:w-1/4 p-4">
-          <div className="bg-[#073042] px-4 py-12 text-white h-full ">
+          <div className="bg-[#073042] px-8 py-12 text-white h-full ">
             <div className="text-2xl font-semibold">Extensible platform</div>
             <div className="mt-4">
               React Navigation is extensible at every layer— you can write your
